@@ -9,9 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var redLightLabel: UIView!
+    @IBOutlet weak var yellowLightLabel: UIView!
+    @IBOutlet weak var greenLightLabel: UIView!
+    @IBOutlet weak var startBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        redLightLabel.layer.cornerRadius = 80
+        yellowLightLabel.layer.cornerRadius = 80
+        greenLightLabel.layer.cornerRadius = 80
+        
+        startBtn.layer.cornerRadius = 10
     }
 
 
