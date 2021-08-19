@@ -18,28 +18,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zfg-Dg-kX8">
-                                <rect key="frame" x="132" y="318" width="150" height="150"/>
+                                <rect key="frame" x="132" y="318" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </view>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gP-aG-3t4">
-                                <rect key="frame" x="132" y="151" width="150" height="150"/>
+                                <rect key="frame" x="132" y="151" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                             </view>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hup-m2-u0T">
-                                <rect key="frame" x="132" y="486" width="150" height="150"/>
+                                <rect key="frame" x="132" y="486" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0b-8x-XUo">
-                                <rect key="frame" x="145" y="689" width="125" height="63"/>
+                                <rect key="frame" x="140" y="685" width="125" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="clickStartBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="FpV-AW-HQy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -48,7 +51,7 @@
                     <connections>
                         <outlet property="greenLightLabel" destination="hup-m2-u0T" id="tbl-o0-7PZ"/>
                         <outlet property="redLightLabel" destination="4gP-aG-3t4" id="r14-y8-cX6"/>
-                        <outlet property="startBtn" destination="u0b-8x-XUo" id="Ovy-ig-nNa"/>
+                        <outlet property="startBtn" destination="u0b-8x-XUo" id="7vw-oV-usO"/>
                         <outlet property="yellowLightLabel" destination="Zfg-Dg-kX8" id="Onc-Iw-NPO"/>
                     </connections>
                 </viewController>
