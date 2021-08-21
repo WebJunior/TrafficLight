@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenLightLabel: UIView!
     @IBOutlet weak var startBtn: UIButton!
     
+    private let lightIsOn: CGFloat = 1
+    private let lightisOff: CGFloat = 0.3
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         redLightLabel.layer.cornerRadius = 70
@@ -26,30 +29,29 @@ class ViewController: UIViewController {
     
     @IBAction func clickStartBtn() {
         if startBtn.currentTitle == "START" {
-            redLightLabel.alpha = 1
+            redLightLabel.alpha = lightIsOn
             startBtn.setTitle("NEXT", for: .normal)
             
+            return
+        }
+        
+        if redLightLabel.alpha == lightIsOn {
+            redLightLabel.alpha = lightisOff
+            yellowLightLabel.alpha = lightIsOn
             
             return
         }
         
-        if redLightLabel.alpha == 1 {
-            redLightLabel.alpha = 0.3
-            yellowLightLabel.alpha = 1
+        if yellowLightLabel.alpha == lightIsOn {
+            yellowLightLabel.alpha = lightisOff
+            greenLightLabel.alpha = lightIsOn
             
             return
         }
         
-        if yellowLightLabel.alpha == 1 {
-            yellowLightLabel.alpha = 0.3
-            greenLightLabel.alpha = 1
-            
-            return
-        }
-        
-        if greenLightLabel.alpha == 1 {
-            greenLightLabel.alpha = 0.3
-            redLightLabel.alpha = 1
+        if greenLightLabel.alpha == lightIsOn {
+            greenLightLabel.alpha = lightisOff
+            redLightLabel.alpha = lightIsOn
             
             return
         }
